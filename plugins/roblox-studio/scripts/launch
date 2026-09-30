@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+if [ -z "${CODEX_MCP_NODE_PATH:-}" ] || [ ! -x "$CODEX_MCP_NODE_PATH" ]; then
+  printf '%s\n' 'Roblox Studio MCP could not find the bundled Node.js runtime. Update or restart ChatGPT.' >&2
+  exit 127
+fi
+
+exec "$CODEX_MCP_NODE_PATH" "${0%/*}/../server.mjs"

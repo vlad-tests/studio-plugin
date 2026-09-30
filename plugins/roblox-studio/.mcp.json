@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "roblox-studio": {
+      "command": "./scripts/launch",
+      "args": [],
+      "cwd": ".",
+      "env_vars": ["CODEX_MCP_NODE_PATH", "LOCALAPPDATA", "APPDATA", "SystemRoot", "USERPROFILE", "HOME", "PATH"]
+    }
+  }
+}
