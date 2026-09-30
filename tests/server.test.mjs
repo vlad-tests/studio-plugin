@@ -39,7 +39,7 @@ function execute(path, input, env = {}) {
 
 test('checks the exact macOS and Windows locations', () => {
   assert.equal(studioPath('darwin', {}), '/Applications/RobloxStudio.app/Contents/MacOS/StudioMCP');
-  assert.equal(studioPath('win32', { LOCALAPPDATA: 'C:\\Users\\Test User\\AppData\\Local' }), 'C:\\Users\\Test User\\AppData\\Local\\Roblox\\StudioMCP.bat');
+  assert.equal(studioPath('win32', { LOCALAPPDATA: 'C:\\Users\\Test User\\AppData\\Local' }), 'C:\\Users\\Test User\\AppData\\Local\\Roblox\\mcp.bat');
   assert.throws(() => studioPath('win32', {}), /LOCALAPPDATA is unset/);
   assert.throws(() => studioPath('linux', {}), /supported on macOS and Windows/);
 });
@@ -109,7 +109,7 @@ test('limits oversized fallback requests', async () => {
 function echoFixture(t) {
   const dir = join(temporary(t), 'Studio MCP & 100% ! (test) café');
   mkdirSync(dir);
-  const path = join(dir, process.platform === 'win32' ? 'StudioMCP.bat' : 'StudioMCP');
+  const path = join(dir, process.platform === 'win32' ? 'mcp.bat' : 'StudioMCP');
   writeFileSync(path, process.platform === 'win32'
     ? '@echo off\r\n"%STUDIO_TEST_NODE%" "%STUDIO_TEST_ECHO%"\r\n'
     : '#!/bin/sh\nexec "$STUDIO_TEST_NODE" "$STUDIO_TEST_ECHO"\n', { mode: 0o755 });

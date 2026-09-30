@@ -1,6 +1,6 @@
 {
   "name": "roblox-studio",
-  "version": "0.1.0+codex.20260930210030",
+  "version": "0.1.0+codex.20260930220332",
   "description": "Create and improve Roblox experiences with ChatGPT in Roblox Studio.",
   "author": {
     "name": "Studio Agent Plugin contributors"
@@ -26,6 +26,14 @@
     ],
     "websiteURL": "https://create.roblox.com/docs/studio/setup",
     "brandColor": "#009FFF",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png",
+    "screenshots": [
+      "./assets/screenshot-build.png",
+      "./assets/screenshot-scripting.png",
+      "./assets/screenshot-setup.png"
+    ],
     "defaultPrompt": [
       "Help me build my Roblox experience.",
       "Explain how my Roblox project works.",

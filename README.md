@@ -12,7 +12,7 @@ End users need only a current ChatGPT desktop app with local MCP support.
 The server checks exactly these locations:
 
 - macOS: `/Applications/RobloxStudio.app/Contents/MacOS/StudioMCP`
-- Windows: `%LOCALAPPDATA%\Roblox\StudioMCP.bat`
+- Windows: `%LOCALAPPDATA%\Roblox\mcp.bat`
 
 If present, StudioMCP inherits stdin, stdout, and stderr unchanged (Windows runs
 the batch file through `cmd.exe`). If missing or unable to launch, the server

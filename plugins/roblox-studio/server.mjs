@@ -12,8 +12,8 @@ const isObject = value => value !== null && typeof value === 'object' && !Array.
 export function studioPath(platform = process.platform, env = process.env) {
   if (platform === 'darwin') return '/Applications/RobloxStudio.app/Contents/MacOS/StudioMCP';
   if (platform === 'win32') {
-    if (!env.LOCALAPPDATA) throw new Error('LOCALAPPDATA is unset; cannot locate %LOCALAPPDATA%\\Roblox\\StudioMCP.bat');
-    return win32.join(env.LOCALAPPDATA, 'Roblox', 'StudioMCP.bat');
+    if (!env.LOCALAPPDATA) throw new Error('LOCALAPPDATA is unset; cannot locate %LOCALAPPDATA%\\Roblox\\mcp.bat');
+    return win32.join(env.LOCALAPPDATA, 'Roblox', 'mcp.bat');
   }
   throw new Error(`Roblox Studio is supported on macOS and Windows; this computer runs ${platform}`);
 }
